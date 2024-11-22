@@ -21,6 +21,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 20px;
     }
     .button, .accept-button {
       padding: 20px 35px;
@@ -71,6 +74,24 @@
       color: #ffffff;
       text-shadow: 2px 2px 6px #ff4500;
     }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .button, .accept-button {
+        padding: 15px 25px;
+        font-size: 20px;
+      }
+      .sms-message {
+        font-size: 26px;
+        padding: 40px;
+      }
+      .message {
+        font-size: 24px;
+      }
+      .final-message {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -113,8 +134,9 @@
       setTimeout(() => {
         smsMessage.style.display = "none";
         finalMessage.style.display = "block";
-      }, 35000);  // SMS stays for 25 seconds
+      }, 35000);  // SMS stays for 35 seconds now
     });
   </script>
 </body>
 </html>
+
