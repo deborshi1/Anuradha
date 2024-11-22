@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romantic Proposal</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Georgia', serif;
+      background-color: black;
+      color: white;
+      text-align: center;
+      transition: color 0.5s ease;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .button, .accept-button {
+      padding: 20px 35px;
+      font-size: 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+    .button {
+      background: linear-gradient(to right, #ff6a6a, #ff1493);
+      color: white;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .accept-button {
+      background: linear-gradient(to right, #ff69b4, #db7093);
+      color: white;
+    }
+    .accept-button:hover {
+      transform: scale(1.1);
+    }
+    .message, .sms-message, .final-message, .accept-button {
+      display: none;
+    }
+    .message {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-shadow: 2px 2px 6px black;
+    }
+    .sms-message {
+      font-size: 32px;
+      color: #ff7f7f; /* Romantic soft red */
+      background-color: rgb(255, 255, 255);
+      padding: 70px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(255, 0, 166, 0.888);
+      text-align: center;
+    }
+    .final-message {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #ffffff;
+      text-shadow: 2px 2px 6px #ff4500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button" id="startButton">Click Here to Begin Anuradha🌹❤️</button>
+    <div class="message" id="message"> Anuradha❤️ You are the most beautiful Person in my chat list... <br>Tumar hasi taa❤️</div>
+    <button class="accept-button" id="acceptButton">Aitay click koro Pretty Anu🌹🌹🌹</button>
+    <div class="sms-message" id="smsMessage">
+      "Dear Anuradha,<br>  
+      Jani amader porichoyy besi somoy hoy nai kintuu ami bujte parsii je tumi onek valo akjon manuss abong tumar bola sokol kotai sundorr...❤️Ami ato kichu bolboo na ami tumar oupor sotti karer crush kaisii🌹❤️ tumi amar oupor bissas rako koyek din kota bolo asakori tumar amake karap lagbee na.. At lest <br>
+      I love Youuuuu <br> 
+      Ami tumake balo Basiii🌹❤️
+    </div>
+    <div class="final-message" id="finalMessage">Thank you for saying YES! 🌹</div>
+  </div>
+  <!-- New Romantic Song -->
+  <audio id="romanticMusic" src="https://www.bensound.com/bensound-music/bensound-love.mp3"></audio>
+  <script>
+    const startButton = document.getElementById('startButton');
+    const message = document.getElementById('message');
+    const acceptButton = document.getElementById('acceptButton');
+    const smsMessage = document.getElementById('smsMessage');
+    const finalMessage = document.getElementById('finalMessage');
+    const audio = document.getElementById('romanticMusic');
+
+    startButton.addEventListener('click', () => {
+      document.body.style.backgroundColor = "black";
+      startButton.style.display = "none";
+      message.style.display = "block";
+      audio.play();
+      setTimeout(() => {
+        acceptButton.style.display = "inline-block";
+      }, 3000);
+    });
+
+    acceptButton.addEventListener('click', () => {
+      acceptButton.style.display = "none";
+      message.style.display = "none";
+      smsMessage.style.display = "block";
+      setTimeout(() => {
+        smsMessage.style.display = "none";
+        finalMessage.style.display = "block";
+      }, 25000);  // SMS stays for 25 seconds
+    });
+  </script>
+</body>
+</html>
